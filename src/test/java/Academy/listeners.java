@@ -9,7 +9,7 @@ import org.testng.ITestResult;
 import resources.base;
 
 public class listeners implements ITestListener  {
-base b=new base();
+	base b=new base();
 	public void onFinish(ITestContext arg0) {
 		// TODO Auto-generated method stub
 		//hey i am done
@@ -22,7 +22,7 @@ base b=new base();
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void onTestFailure(ITestResult result) {
@@ -34,23 +34,28 @@ base b=new base();
 			b.getScreenshot(result.getName());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("This is the screenshot of the failed test");
+
 		}
 	}
 
 	public void onTestSkipped(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("This is the screenshot of the failed test");
+
+
 	}
 
 	public void onTestStart(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("This is the screenshot of the failed test");
+
+
 	}
 
 	public void onTestSuccess(ITestResult arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
