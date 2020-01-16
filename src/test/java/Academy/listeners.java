@@ -17,7 +17,7 @@ base b=new base();
 
 	public void onStart(ITestContext arg0) {
 		// TODO Auto-generated method stub
-		//
+		System.out.println("This is the ITestContxt Method");
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
@@ -28,6 +28,7 @@ base b=new base();
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 		//screenshot
+		System.out.println("This is the screenshot of the failed test");
 
 		try {
 			b.getScreenshot(result.getName());
